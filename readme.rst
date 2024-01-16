@@ -47,6 +47,16 @@ Full administrator access required before starting
         PS C:\Apache24\bin>
 
 
+1. pip installs
+
+   troubleshooting
+   
+   To ``pip install mod_wsgi``, full Microsoft visual studio has to be installed 
+   (developer tools to compile C++). Start by installed ``VC_redist.x64.exe`` downloaded 
+   from apache lounge, then full C++ environment from ``vs_BuildTools.exe`` downloaded from 
+   ``https://visualstudio.microsoft.com/visual-cpp-build-tools/``
+ 
+
 
 OpenSSH
 -----------
