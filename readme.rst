@@ -4,7 +4,12 @@ Configuring a Windows Server
 Windows server 2012 R2 (Win8.1)
 
 - Login as PSMS user
-- Pwd is D*****9
+- Pwd is D*****
+
+
+Apache
+-----------
+
 
 
 OpenSSH
