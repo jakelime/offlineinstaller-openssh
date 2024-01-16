@@ -10,6 +10,42 @@ Windows server 2012 R2 (Win8.1)
 Apache
 -----------
 
+Full administrator access required before starting
+
+1. Copy folder from zip package ``httpd`` to ``C:\Apache24``
+
+1. Run ``powershell`` with administrator
+
+   .. code-block:: shell
+
+        PS C:\> cd .\Apache24\bin\
+        PS C:\Apache24\bin> .\httpd.exe -k install
+        Installing the 'Apache2.4' service
+        The 'Apache2.4' service is successfully installed.
+        Testing httpd.conf....
+        Errors reported here must be corrected before the service can be started.
+        PS C:\> cd C:\Apache24\conf
+        PS C:\Apache24\conf> subl . # Opens the Apache conf folder using your favorite editor/IDE    
+        ## You have to open the file using root priviledges! or else the file will be locked
+
+
+1. Edit the ``httpd.conf`` file
+
+    .. code-block:: text
+
+        Define SRVROOT "c:/Apache24"
+        ServerRoot "${SRVROOT}"
+        Listen 8000
+
+
+1. Restart the server
+
+    .. code-block:: shell
+
+        PS C:\Apache24> cd bin
+        PS C:\Apache24\bin> .\httpd.exe -k start
+        PS C:\Apache24\bin>
+
 
 
 OpenSSH
