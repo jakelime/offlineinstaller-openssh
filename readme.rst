@@ -6,6 +6,40 @@ Windows server 2012 R2 (Win8.1)
 - Login as PSMS user
 - Pwd is D*****
 
+Downloading vs_BuildTools 
+-------------------------
+
+``https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022``
+
+#. Download the cli tool. ``vs_BuildTools.exe``
+
+#. Create a ``layout``. This will download offline package, into a local folder ``localVScache``
+
+   .. code-block:: shell
+
+        cd C:\vstools
+
+        .\vs_BuildTools.exe --layout C:\vstools\localVScache --lang en-US 
+        --add Microsoft.VisualStudio.Workload.UniversalBuildTools 
+        --add Microsoft.VisualStudio.Workload.VCTools
+
+#. On the offline computer, 
+   
+   .. code-block:: shell
+
+        .\vs_BuildTools.exe --noWeb 
+        --add Microsoft.VisualStudio.Workload.UniversalBuildTools 
+        --add Microsoft.VisualStudio.Workload.VCTools
+   
+   select ``download, then install``
+
+
+Update git submodules
+---------------------
+``git submodule update --recursive --remote``
+
+
+
 
 Apache
 -----------
