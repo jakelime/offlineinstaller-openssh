@@ -9,6 +9,8 @@ Windows server 2012 R2 (Win8.1)
 Downloading vs_BuildTools 
 -------------------------
 
+Unfortunately, the minimum requirement for building VisualStudio is ``Windows Server Core 2016`` (2012 is too old)
+
 ``https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022``
 
 #. Download the cli tool. ``vs_BuildTools.exe``
